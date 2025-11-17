@@ -16,15 +16,17 @@
   <header>
     <nav class="navbar">
       <div class="logo" id="logo">SnackSprint</div>
+
       <ul class="nav-links">
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Menu</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Contact</a></li>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="index.html#menu-section">Menu</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
       </ul>
+
       <div class="auth-buttons">
-        <button class="login-btn">Sign In</button>
-        <button class="signup-btn">Sign Up</button>
+        <button class="login-btn" onclick="location.href='signin.html'">Sign In</button>
+        <button class="signup-btn" onclick="location.href='signup.html'">Sign Up</button>
       </div>
     </nav>
   </header>
@@ -40,21 +42,24 @@
   </section>
 
   <!-- Categories Section -->
-  <section class="categories">
+  <section class="categories" id="menu-section">
     <h2>Top Categories</h2>
     <div class="cat-container">
       <div class="cat-card">
         <img src="images/burger.jpg" alt="Burger">
         <h3>Burgers</h3>
       </div>
+
       <div class="cat-card">
         <img src="images/pizza.jpg" alt="Pizza">
         <h3>Pizzas</h3>
       </div>
+
       <div class="cat-card">
         <img src="images/drink.jpg" alt="Drinks">
         <h3>Drinks</h3>
       </div>
+
       <div class="cat-card">
         <img src="images/dessert.jpg" alt="Dessert">
         <h3>Desserts</h3>
@@ -71,11 +76,13 @@
         <h3>Grilled Sandwich</h3>
         <p>₹99 • 15 mins</p>
       </div>
+
       <div class="pop-card">
         <img src="images/coffee.jpg" alt="Coffee">
         <h3>Hot Coffee</h3>
         <p>₹49 • 10 mins</p>
       </div>
+
       <div class="pop-card">
         <img src="images/noodles.jpg" alt="Noodles">
         <h3>Spicy Noodles</h3>
@@ -95,8 +102,8 @@
     </div>
   </footer>
 
-  <!-- Hidden Easter Egg Element for Phase 2 -->
+  <!-- Hidden Easter Egg for Phase 2 -->
   <div id="easter-egg">🥳 You found the secret snack! Midnight deals unlocked soon... 🍕</div>
-  <!-- DO NOT COPY! - By Shivansh Pandey -->
+
 </body>
 </html>
