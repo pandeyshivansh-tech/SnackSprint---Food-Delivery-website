@@ -12,47 +12,60 @@
 </head>
 
 <body>
+
   <!-- Navigation bar -->
   <header>
     <nav class="navbar">
+
       <div class="logo" id="logo">SnackSprint</div>
 
       <ul class="nav-links">
-        <li>
-          <a href="index.html">Home</a>
-        </li>
-        <li>
-          <a href="index.html#menu-section">Menu</a>
-        </li>
-        <li>
-          <a href="about.html">About</a>
-        </li>
-        <li>
-          <a href="contact.html">Contact</a>
-        </li>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="index.html#menu-section">Menu</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
       </ul>
 
       <div class="auth-buttons">
+
+        <!-- Cart Icon + Badge -->
+        <button class="cart-icon">
+          <i class="fa-solid fa-cart-shopping"></i>
+          <span class="cart-count">0</span>
+        </button>
+
+        <!-- Theme Switcher -->
+        <button class="theme-toggle">☀</button>
+
         <button class="login-btn" onclick="location.href='signin.html'">Sign In</button>
         <button class="signup-btn" onclick="location.href='signup.html'">Sign Up</button>
+
       </div>
     </nav>
   </header>
+
+  <!-- Cart Dropdown -->
+  <div class="cart-dropdown">
+    <h3>Your Cart</h3>
+    <div class="cart-items"></div>
+    <p class="empty-msg">Cart is empty</p>
+  </div>
 
   <!-- Hero Section -->
   <section class="hero">
     <div class="hero-content">
       <h1>Fast. Fresh. Fun.</h1>
-      <p>Delivering Snacks and Drinks right when you crave them!</p>
+      <p class="tagline">Delivering Snacks and Drinks right when you crave them!</p>
       <a href="#" class="btn">Order Now</a>
       <p class="credit">By <strong>Shivansh Pandey</strong></p>
     </div>
   </section>
 
-  <!-- Categories Section -->
+  <!-- Categories Section (NO ADD TO CART BUTTONS HERE!) -->
   <section class="categories" id="menu-section">
     <h2>Top Categories</h2>
     <div class="cat-container">
+
       <div class="cat-card">
         <img src="images/burger.jpg" alt="Burger">
         <h3>Burgers</h3>
@@ -72,6 +85,7 @@
         <img src="images/dessert.jpg" alt="Dessert">
         <h3>Desserts</h3>
       </div>
+
     </div>
   </section>
 
@@ -79,27 +93,32 @@
   <section class="popular">
     <h2>Popular Near You</h2>
     <div class="pop-container">
+
       <div class="pop-card">
         <img src="images/sandwich.jpg" alt="Sandwich">
         <h3>Grilled Sandwich</h3>
         <p>₹99 • 15 mins</p>
+        <button class="cart-btn" data-name="Grilled Sandwich" data-img="images/sandwich.jpg">Add to Cart</button>
       </div>
 
       <div class="pop-card">
         <img src="images/coffee.jpg" alt="Coffee">
         <h3>Hot Coffee</h3>
         <p>₹49 • 10 mins</p>
+        <button class="cart-btn" data-name="Hot Coffee" data-img="images/coffee.jpg">Add to Cart</button>
       </div>
 
       <div class="pop-card">
         <img src="images/noodles.jpg" alt="Noodles">
         <h3>Spicy Noodles</h3>
         <p>₹149 • 20 mins</p>
+        <button class="cart-btn" data-name="Spicy Noodles" data-img="images/noodles.jpg">Add to Cart</button>
       </div>
+
     </div>
   </section>
 
-  <!-- Footer -->
+  <!-- Bottom area with my Socials -->
   <footer>
     <p>© 2025 SnackSprint — By Shivansh Pandey. All Rights Reserved.</p>
     <div class="socials">
@@ -110,8 +129,10 @@
     </div>
   </footer>
 
-  <!-- Hidden Easter Egg for Phase 2 -->
-  <div id="easter-egg">🥳 You found the secret snack! Midnight deals unlocked soon... 🍕</div>
+  <!-- Hidden Easter Egg -->
+  <div id="easter-egg">🥳 Thanks for choosing SnackSprint 🍕</div>
+
+  <script src="js/script.js"></script>
 
 </body>
 </html>
