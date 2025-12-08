@@ -1,12 +1,13 @@
 // Light/Dark Mode Toggle Button
 const themeBtn = document.querySelector(".theme-toggle");
 
-themeBtn.addEventListener("click", function () {
+themeBtn.addEventListener("click", function(){
   document.body.classList.toggle("light");
 
-  if (document.body.classList.contains("light")) {
+  if (document.body.classList.contains("light")){
     themeBtn.textContent = "🌙";
-  } else {
+  } 
+  else{
     themeBtn.textContent = "☀";
   }
 });
@@ -23,19 +24,20 @@ const emptyMsg = document.querySelector(".empty-msg");
 
 
 // Add to Cart Buttons
-cartBtns.forEach(function (btn) {
-  btn.addEventListener("click", function () {
+cartBtns.forEach(function(btn){
+  btn.addEventListener("click", function(){
     let name = btn.dataset.name;
     let img = btn.dataset.img;
 
-    let existingItem = cart.find(function (item) {
+    let existingItem = cart.find(function(item){
       return item.name === name;
     });
 
-    if (existingItem) {
+    if (existingItem){
       existingItem.qty = existingItem.qty + 1;
-    } else {
-      cart.push({ name: name, img: img, qty: 1 });
+    } 
+    else{
+      cart.push({name: name, img: img, qty: 1});
     }
 
     updateCart();
@@ -43,7 +45,7 @@ cartBtns.forEach(function (btn) {
     // Click feedback
     btn.classList.add("clicked");
 
-    setTimeout(function () {
+    setTimeout(function(){
       btn.classList.remove("clicked");
     }, 150);
   });
@@ -51,17 +53,17 @@ cartBtns.forEach(function (btn) {
 
 
 // Update Cart UI
-function updateCart() {
+function updateCart(){
   let total = 0;
 
-  cart.forEach(function (item) {
+  cart.forEach(function(item){
     total = total + item.qty;
   });
 
   cartCount.textContent = total;
   cartItemsBox.innerHTML = "";
 
-  cart.forEach(function (item) {
+  cart.forEach(function(item){
     cartItemsBox.innerHTML += `
       <div class="cart-row">
         <img src="${item.img}">
@@ -71,16 +73,17 @@ function updateCart() {
     `;
   });
 
-  if (cart.length === 0) {
+  if (cart.length === 0){
     emptyMsg.style.display = "block";
-  } else {
+  } 
+  else{
     emptyMsg.style.display = "none";
   }
 }
 
 
 // Open/Close Cart Dropdown
-cartIcon.addEventListener("click", function () {
+cartIcon.addEventListener("click", function(){
   cartDropdown.classList.toggle("show");
 });
 
@@ -90,10 +93,10 @@ const logo = document.getElementById("logo");
 const easterEgg = document.getElementById("easter-egg");
 
 let clickCount = 0;
-logo.addEventListener("click", function () {
+logo.addEventListener("click", function(){
   clickCount++;
 
-  if (clickCount === 3) {
+  if (clickCount === 3){
     easterEgg.style.display = "block";
     clickCount = 0;
   }

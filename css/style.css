@@ -363,11 +363,11 @@ footer p {
 /* Responsiveness */
 @media (max-width: 768px) {
   .nav-links {
-    display: none;
+    display: grid;
   }
 
   .auth-buttons {
-    display: none;
+    display: grid;
   }
 
   .hero h1 {
@@ -407,9 +407,17 @@ footer p {
   color: #fff !important;
 }
 
+.light .popular {
+  color: white;
+}
+
 .light footer {
   background: #ddd;
   color: #333;
+}
+
+.light .socials a {
+  color: black;
 }
 
 .light .cart-icon {
@@ -426,13 +434,7 @@ footer p {
   color: #fff !important;
 }
 
-.light .socials a {
-  color: black;
-}
 
-.light .popular {
-  color: white;
-}
 
 /* Click Feedback on Add to Cart buttons */
 .cart-btn.clicked {
