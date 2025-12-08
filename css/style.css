@@ -426,7 +426,13 @@ footer p {
   color: #fff !important;
 }
 
+.light .socials a {
+  color: black;
+}
 
+.light .popular {
+  color: white;
+}
 
 /* Click Feedback on Add to Cart buttons */
 .cart-btn.clicked {
